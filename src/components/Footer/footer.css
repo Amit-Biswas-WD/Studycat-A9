@@ -1,0 +1,8 @@
+p:hover {
+    color: rgb(252, 252, 141);
+}
+
+p{
+   font-size: 16px;
+   font-weight: 400;
+}
