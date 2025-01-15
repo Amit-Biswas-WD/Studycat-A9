@@ -1,5 +1,6 @@
 import Banner from "../../components/Banner/Banner";
 import ExploreLanguages from "../../components/ExploreLanguages/ExploreLanguages";
+import StudycatFree from "../../components/StudycatFree/StudycatFree";
 import StudyCatWorks from "../../components/StudycatWorks/StudycatWorks";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
       <Banner />
       <StudyCatWorks />
       <ExploreLanguages/>
+      <StudycatFree/>
     </div>
   );
 };
