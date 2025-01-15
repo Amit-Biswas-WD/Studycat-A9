@@ -25,7 +25,7 @@ const StudycatFree = () => {
           </p>
         </div>
         <div className="flex justify-center">
-          <button className="text-[#499DEC] text-xl w-80 h-14 bg-[#ffffff] border-b-[6px] border-[#0b7de7] rounded-2xl hover:bg-[#e6f2ff] active:bg-[#d9eaff] transition-all">
+          <button className="text-[#499DEC] font-bold text-xl w-80 h-14 bg-[#ffffff] border-b-[6px] border-[#0b7de7] rounded-2xl hover:bg-[#e6f2ff] active:bg-[#d9eaff] transition-all">
             Start learning today
           </button>
         </div>

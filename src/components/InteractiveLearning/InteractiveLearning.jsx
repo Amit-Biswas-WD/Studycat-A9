@@ -103,6 +103,21 @@ const InteractiveLearning = () => {
           </div>
         </div>
       </div>
+      <div className="bg-[#499DEC]">
+        <div className="flex justify-center items-center pt-12">
+          <button className="text-[#499DEC] font-bold text-xl w-80 h-14 bg-white border-b-[6px] border-[#0b7de7] rounded-2xl hover:bg-[#e6f2ff] active:bg-[#d9eaff] transition-all flex justify-center items-center">
+            Start learning for free
+          </button>
+        </div>
+
+        <div className="w-full h-auto">
+          <img
+            className="w-full h-auto"
+            src="https://i.ibb.co.com/S0t50dj/Screenshot-9.png"
+            alt=""
+          />
+        </div>
+      </div>
     </div>
   );
 };
