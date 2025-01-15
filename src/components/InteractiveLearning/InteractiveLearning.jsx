@@ -112,7 +112,7 @@ const InteractiveLearning = () => {
 
         <div className="w-full h-auto">
           <img
-            className="w-full h-auto"
+            className="w-full h-auto bg-cover object-cover"
             src="https://i.ibb.co.com/S0t50dj/Screenshot-9.png"
             alt=""
           />
