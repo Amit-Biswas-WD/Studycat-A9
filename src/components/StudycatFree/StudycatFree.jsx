@@ -2,7 +2,7 @@ import icon from "../../assets/cta_body_illustration_2.BluYc9Pn.svg";
 
 const StudycatFree = () => {
   return (
-    <div className="bg-[#499DEC] max-w-[960px] mx-auto rounded-2xl text-white py-12 px-6 relative mt-80 my-16">
+    <div className="bg-[#499DEC] max-w-[960px] mx-auto rounded-2xl text-white py-12 px-6 relative mt-60 my-16">
       <div className="flex justify-center mb-10">
         <img src={icon} alt="StudyCat Illustration" className="max-w-[320px] h-auto absolute -top-44" />
       </div>
