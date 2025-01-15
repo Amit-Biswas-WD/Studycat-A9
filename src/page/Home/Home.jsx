@@ -2,6 +2,7 @@ import Banner from "../../components/Banner/Banner";
 import ExploreLanguages from "../../components/ExploreLanguages/ExploreLanguages";
 import InteractiveLearning from "../../components/InteractiveLearning/InteractiveLearning";
 import LearnKid from "../../components/LearnKid/LearnKid";
+import SafeLearning from "../../components/SafeLearning/SafeLearning";
 import ScienceAndFun from "../../components/ScienceAndFun/ScienceAndFun";
 import StudycatFree from "../../components/StudycatFree/StudycatFree";
 import StudyCatWorks from "../../components/StudycatWorks/StudycatWorks";
@@ -19,6 +20,7 @@ const Home = () => {
         <InteractiveLearning />
       <section className="max-w-screen-lg mx-auto">
         <LearnKid />
+        <SafeLearning/>
       </section>
     </div>
   );
