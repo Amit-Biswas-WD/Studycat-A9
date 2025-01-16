@@ -16,7 +16,7 @@ const ParentsStudycat = () => {
         <h2 className="text-5xl text-center font-semibold pb-10">
           Why do parents and kids love Studycat?
         </h2>
-        <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 max-w-screen-lg mx-auto p-8">
+        <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 max-w-screen-xl mx-auto p-8">
           <div className="col-span-1 text-center rounded-2xl py-9 px-6 bg-slate-100 sm:w-full sm:max-w-full md:max-w-[370px]  mx-auto">
             <div className="flex justify-center">
               <img
