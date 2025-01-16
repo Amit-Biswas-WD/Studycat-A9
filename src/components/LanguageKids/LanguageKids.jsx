@@ -1,3 +1,5 @@
+import FluencyStartsHere from "../FluencyStartsHere/FluencyStartsHere";
+import PawsApplause from "../PawsApplause/PawsApplause";
 import Banner from "./Banner/Banner";
 import ExpertisePlay from "./ExpertisePlay/ExpertisePlay";
 import LessonAdventure from "./LessionAdventure/LessonAdventure";
@@ -10,8 +12,12 @@ const LanguageKids = () => {
         <Banner />
       </section>
       <LessonAdventure />
-      <UnlockingFluency/>
-      <ExpertisePlay/>
+      <UnlockingFluency />
+      <section className="mb-16 mt-32">
+        <FluencyStartsHere />
+      </section>
+      <ExpertisePlay />
+      <PawsApplause />
     </div>
   );
 };
