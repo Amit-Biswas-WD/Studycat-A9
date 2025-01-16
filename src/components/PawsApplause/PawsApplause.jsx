@@ -29,12 +29,12 @@ const PawsApplause = () => {
   ];
 
   return (
-    <div className="mb-16 max-w-screen-lg mx-auto">
+    <div className="mb-[192px] max-w-screen-lg mx-auto md:px-[90px] sm:px-[40px]">
       <div className="flex justify-center items-center mb-8">
         <img src={award} alt="" />
       </div>
       <div className="my-5 text-center">
-        <h2 className="text-4xl font-bold">
+        <h2 className="md:text-4xl sm:text-2xl font-bold">
           Paws and applause in language learning excellence
         </h2>
         <p className="text-lg font-normal mt-5 w-[80%] mx-auto">
@@ -43,9 +43,13 @@ const PawsApplause = () => {
           achievements!
         </p>
       </div>
-      <div className="flex justify-between">
+      <div className="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-8">
         {totalImage.map((image) => (
-          <img className="w-[120px] h-auto bg-cover object-cover" src={image.image} alt="" />
+          <img
+            className="max-w-[120px] h-auto bg-cover object-cover mx-auto"
+            src={image.image}
+            alt=""
+          />
         ))}
       </div>
     </div>

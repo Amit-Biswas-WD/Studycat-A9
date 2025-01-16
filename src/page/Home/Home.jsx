@@ -1,5 +1,6 @@
 import Banner from "../../components/Banner/Banner";
 import ExploreLanguages from "../../components/ExploreLanguages/ExploreLanguages";
+import FluencyStartsHere from "../../components/FluencyStartsHere/FluencyStartsHere";
 import InteractiveLearning from "../../components/InteractiveLearning/InteractiveLearning";
 import LearnKid from "../../components/LearnKid/LearnKid";
 import ParentsStudycat from "../../components/ParentsStudycat/ParentsStudycat";
@@ -27,6 +28,7 @@ const Home = () => {
       <section>
         <ParentsStudycat />
         <PawsApplause />
+        <FluencyStartsHere/>
       </section>
     </div>
   );
