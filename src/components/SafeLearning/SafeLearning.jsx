@@ -2,7 +2,7 @@ import React from "react";
 
 const SafeLearning = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-16">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-16 p-2">
       {/* Image Section */}
       <div className="order-1 w-full max-w-[740px] mx-auto">
         <img
