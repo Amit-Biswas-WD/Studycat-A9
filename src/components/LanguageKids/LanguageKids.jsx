@@ -1,4 +1,5 @@
 import Banner from "./Banner/Banner";
+import ExpertisePlay from "./ExpertisePlay/ExpertisePlay";
 import LessonAdventure from "./LessionAdventure/LessonAdventure";
 import UnlockingFluency from "./UnlockingFluency/UnlockingFluency";
 
@@ -10,6 +11,7 @@ const LanguageKids = () => {
       </section>
       <LessonAdventure />
       <UnlockingFluency/>
+      <ExpertisePlay/>
     </div>
   );
 };
