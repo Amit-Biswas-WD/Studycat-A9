@@ -1,5 +1,6 @@
 import Banner from "./Banner/Banner";
 import LessonAdventure from "./LessionAdventure/LessonAdventure";
+import UnlockingFluency from "./UnlockingFluency/UnlockingFluency";
 
 const LanguageKids = () => {
   return (
@@ -8,6 +9,7 @@ const LanguageKids = () => {
         <Banner />
       </section>
       <LessonAdventure />
+      <UnlockingFluency/>
     </div>
   );
 };
