@@ -29,7 +29,7 @@ const PawsApplause = () => {
   ];
 
   return (
-    <div className="mb-[192px] max-w-screen-xl mx-auto">
+    <div className="my-16 max-w-screen-xl mx-auto">
       <div className="flex justify-center items-center mb-8">
         <img src={award} alt="" />
       </div>

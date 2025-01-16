@@ -1,6 +1,6 @@
 import icon from "../../assets/cta_body_illustration_2.BluYc9Pn.svg";
 
-const StudycatFree = () => {
+const StudyCatFree = () => {
   return (
     <div className="md:mx-8">
       <div className="bg-[#499DEC] max-w-[960px] mx-auto rounded-2xl text-white py-12 px-6 relative mt-60 my-16">
@@ -34,4 +34,4 @@ const StudycatFree = () => {
   );
 };
 
-export default StudycatFree;
+export default StudyCatFree;

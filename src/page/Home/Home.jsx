@@ -7,18 +7,19 @@ import ParentsStudycat from "../../components/ParentsStudycat/ParentsStudycat";
 import PawsApplause from "../../components/PawsApplause/PawsApplause";
 import SafeLearning from "../../components/SafeLearning/SafeLearning";
 import ScienceAndFun from "../../components/ScienceAndFun/ScienceAndFun";
-import StudycatFree from "../../components/StudycatFree/StudycatFree";
 import StudyCatSocial from "../../components/StudyCatSocial/StudyCatSocial";
 import StudyCatWorks from "../../components/StudycatWorks/StudycatWorks";
+import StudyCatFree from "./../../components/StudycatFree/StudycatFree";
 
 const Home = () => {
   return (
     <div>
       <Banner />
+      <FluencyStartsHere />
       <section className="max-w-screen-lg mx-auto p-2">
         <StudyCatWorks />
         <ExploreLanguages />
-        <StudycatFree />
+        <StudyCatFree />
         <ScienceAndFun />
       </section>
       <InteractiveLearning />
@@ -29,8 +30,7 @@ const Home = () => {
       <section>
         <ParentsStudycat />
         <PawsApplause />
-        <FluencyStartsHere/>
-        <StudyCatSocial/>
+        <StudyCatSocial />
       </section>
     </div>
   );

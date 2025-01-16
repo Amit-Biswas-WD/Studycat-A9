@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
 import Home from "./../page/Home/Home";
+import LanguageKids from "../components/LanguageKids/LanguageKids";
 
 export const router = createBrowserRouter([
   {
@@ -13,7 +14,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/language-kids",
-        element: <h2>This is Languages for kids</h2>,
+        element: <LanguageKids/>
       },
       {
         path: "/about-us",
