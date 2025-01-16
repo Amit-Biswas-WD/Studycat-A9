@@ -4,7 +4,7 @@ import calico from "../../assets/calico.BrP1IIMZ.svg";
 
 const ParentsStudycat = () => {
   return (
-    <div className="my-16">
+    <div className="mt-16 mb-2">
       <div>
         <img
           className="w-full h-auto bg-cover object-cover"
