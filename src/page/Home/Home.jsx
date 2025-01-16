@@ -2,6 +2,7 @@ import Banner from "../../components/Banner/Banner";
 import ExploreLanguages from "../../components/ExploreLanguages/ExploreLanguages";
 import InteractiveLearning from "../../components/InteractiveLearning/InteractiveLearning";
 import LearnKid from "../../components/LearnKid/LearnKid";
+import ParentsStudycat from "../../components/ParentsStudycat/ParentsStudycat";
 import SafeLearning from "../../components/SafeLearning/SafeLearning";
 import ScienceAndFun from "../../components/ScienceAndFun/ScienceAndFun";
 import StudycatFree from "../../components/StudycatFree/StudycatFree";
@@ -21,6 +22,9 @@ const Home = () => {
       <section className="max-w-screen-lg mx-auto">
         <LearnKid />
         <SafeLearning/>
+      </section>
+      <section className="">
+        <ParentsStudycat/>
       </section>
     </div>
   );
