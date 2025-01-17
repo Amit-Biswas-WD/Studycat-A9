@@ -1,9 +1,12 @@
-import { useState } from "react";
-import { FaEyeSlash } from "react-icons/fa";
+import { useContext, useState } from "react";
+import { FaEyeSlash, FaGithub } from "react-icons/fa";
 import { IoIosEye } from "react-icons/io";
+import { AuthContext } from "../../context/AuthProvider";
+import { FcGoogle } from "react-icons/fc";
 
 const SignUp = () => {
   const [showPass, setShowPass] = useState(false);
+  const { createGoogleAccount, createGithubAccount } = useContext(AuthContext);
 
   const handleRegister = (event) => {
     event.preventDefault();
@@ -14,6 +17,16 @@ const SignUp = () => {
     const password = form.get("password");
     console.log({ name, photo, email, password });
   };
+
+  const handleGoogleLogin = () => {
+    createGoogleAccount()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((err) => {
+        console.log("Error", err);
+      });
+  }
 
   return (
     <div className="min-h-screen flex justify-center items-center">
@@ -97,6 +110,20 @@ const SignUp = () => {
             <button className="btn btn-primary">Register</button>
           </div>
         </form>
+        <div className="flex px-8 justify-between mb-4">
+          <div
+            onClick={handleGoogleLogin}
+            className="flex gap-4 items-center btn"
+          >
+            <FcGoogle className="w-6 h-auto" /> Google
+          </div>
+          <div
+            onClick={createGithubAccount}
+            className="flex gap-4 items-center btn"
+          >
+            <FaGithub className="w-6 h-auto" /> Github
+          </div>
+        </div>
       </div>
     </div>
   );
