@@ -28,6 +28,16 @@ const SignUp = () => {
       });
   }
 
+  const handleGithubLogin = () => {
+    createGithubAccount()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((err) => {
+        console.log("Error", err);
+      });
+  }
+
   return (
     <div className="min-h-screen flex justify-center items-center">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
@@ -118,7 +128,7 @@ const SignUp = () => {
             <FcGoogle className="w-6 h-auto" /> Google
           </div>
           <div
-            onClick={createGithubAccount}
+            onClick={handleGithubLogin}
             className="flex gap-4 items-center btn"
           >
             <FaGithub className="w-6 h-auto" /> Github
