@@ -3,7 +3,8 @@ import MainLayout from "../layout/MainLayout";
 import Home from "./../page/Home/Home";
 import LanguageKids from "../components/LanguageKids/LanguageKids";
 import AboutUs from "../page/AboutUs/AboutUs";
-import LearningResources from './../page/LearningResources/LearningResources';
+import LearningResources from "./../page/LearningResources/LearningResources";
+import SignUp from './../page/Login - Register/SignUp';
 
 export const router = createBrowserRouter([
   {
@@ -16,15 +17,23 @@ export const router = createBrowserRouter([
       },
       {
         path: "/language-kids",
-        element: <LanguageKids/>
+        element: <LanguageKids />,
       },
       {
         path: "/about-us",
-        element: <AboutUs/>
+        element: <AboutUs />,
       },
       {
         path: "/learning-resources",
-        element: <LearningResources/>
+        element: <LearningResources />,
+      },
+      {
+        path: "/login",
+        element: <h2>This is Login Page.</h2>,
+      },
+      {
+        path: "/sign-up",
+        element: <SignUp/>
       },
     ],
   },
