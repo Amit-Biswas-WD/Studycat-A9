@@ -3,6 +3,7 @@ import { FaEyeSlash, FaGithub } from "react-icons/fa";
 import { IoIosEye } from "react-icons/io";
 import { AuthContext } from "../../context/AuthProvider";
 import { FcGoogle } from "react-icons/fc";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const [showPass, setShowPass] = useState(false);
@@ -129,6 +130,9 @@ const SignUp = () => {
             <button className="btn btn-primary">Register</button>
           </div>
         </form>
+        <Link className="text-end mr-4 mb-5 text-green-500 font-semibold" to={`/login`}>
+          Go to login page
+        </Link>
         <div className="flex px-8 justify-between mb-4">
           <div
             onClick={handleGoogleLogin}

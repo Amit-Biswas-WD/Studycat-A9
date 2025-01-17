@@ -1,10 +1,13 @@
-import { useState } from "react";
-import { FaEyeSlash } from "react-icons/fa";
+import { useContext, useState } from "react";
+import { FaEyeSlash, FaGithub } from "react-icons/fa";
 import { IoIosEye } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/AuthProvider";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
   const [showPass, setShowPass] = useState(false);
+  const { createGoogleAccount, createGithubAccount } = useContext(AuthContext);
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -12,6 +15,26 @@ const Login = () => {
     const email = form.get("email");
     const password = form.get("password");
     console.log({ email, password });
+  };
+
+  const handleGoogleLogin = () => {
+    createGoogleAccount()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((err) => {
+        console.log("Error", err);
+      });
+  };
+
+  const handleGithubLogin = () => {
+    createGithubAccount()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((err) => {
+        console.log("Error", err);
+      });
   };
 
   return (
@@ -65,10 +88,24 @@ const Login = () => {
         </form>
         <p className="text-center mb-6">
           Don,t Have An Account ?
-          <Link to={""} className="text-red-500 font-semibold">
-            Register
+          <Link to={"/sign-up"} className="text-red-500 font-semibold">
+            Sign Up
           </Link>
         </p>
+        <div className="flex px-8 justify-between mb-4">
+          <div
+            onClick={handleGoogleLogin}
+            className="flex gap-4 items-center btn"
+          >
+            <FcGoogle className="w-6 h-auto" /> Google
+          </div>
+          <div
+            onClick={handleGithubLogin}
+            className="flex gap-4 items-center btn"
+          >
+            <FaGithub className="w-6 h-auto" /> Github
+          </div>
+        </div>
       </div>
     </div>
   );
