@@ -6,7 +6,8 @@ import { FcGoogle } from "react-icons/fc";
 
 const SignUp = () => {
   const [showPass, setShowPass] = useState(false);
-  const { createGoogleAccount, createGithubAccount } = useContext(AuthContext);
+  const { createUser, createGoogleAccount, createGithubAccount } =
+    useContext(AuthContext);
 
   const handleRegister = (event) => {
     event.preventDefault();
@@ -15,7 +16,15 @@ const SignUp = () => {
     const photo = form.get("photo");
     const email = form.get("email");
     const password = form.get("password");
-    console.log({ name, photo, email, password });
+    // console.log({ name, photo, email, password });
+
+    createUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((err) => {
+        console.log("Error", err);
+      });
   };
 
   const handleGoogleLogin = () => {
@@ -26,7 +35,7 @@ const SignUp = () => {
       .catch((err) => {
         console.log("Error", err);
       });
-  }
+  };
 
   const handleGithubLogin = () => {
     createGithubAccount()
@@ -36,7 +45,7 @@ const SignUp = () => {
       .catch((err) => {
         console.log("Error", err);
       });
-  }
+  };
 
   return (
     <div className="min-h-screen flex justify-center items-center">
