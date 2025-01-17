@@ -4,7 +4,8 @@ import Home from "./../page/Home/Home";
 import LanguageKids from "../components/LanguageKids/LanguageKids";
 import AboutUs from "../page/AboutUs/AboutUs";
 import LearningResources from "./../page/LearningResources/LearningResources";
-import SignUp from './../page/Login - Register/SignUp';
+import SignUp from "./../page/Login - Register/SignUp";
+import Login from "./../page/Login - Register/Login";
 
 export const router = createBrowserRouter([
   {
@@ -28,12 +29,12 @@ export const router = createBrowserRouter([
         element: <LearningResources />,
       },
       {
-        path: "/login",
-        element: <h2>This is Login Page.</h2>,
+        path: "/sign-up",
+        element: <SignUp />,
       },
       {
-        path: "/sign-up",
-        element: <SignUp/>
+        path: "/login",
+        element: <Login />,
       },
     ],
   },
