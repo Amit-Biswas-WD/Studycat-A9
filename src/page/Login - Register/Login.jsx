@@ -7,7 +7,8 @@ import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
   const [showPass, setShowPass] = useState(false);
-  const { createGoogleAccount, createGithubAccount } = useContext(AuthContext);
+  const { createEmailPassword, createGoogleAccount, createGithubAccount } =
+    useContext(AuthContext);
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -15,6 +16,14 @@ const Login = () => {
     const email = form.get("email");
     const password = form.get("password");
     console.log({ email, password });
+
+    createEmailPassword(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((err) => {
+        console.log("Error", err);
+      });
   };
 
   const handleGoogleLogin = () => {
