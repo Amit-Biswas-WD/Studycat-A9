@@ -3,6 +3,7 @@ import MainLayout from "../layout/MainLayout";
 import Home from "./../page/Home/Home";
 import LanguageKids from "../components/LanguageKids/LanguageKids";
 import AboutUs from "../page/AboutUs/AboutUs";
+import LearningResources from './../page/LearningResources/LearningResources';
 
 export const router = createBrowserRouter([
   {
@@ -23,7 +24,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/learning-resources",
-        element: <h2>This is Learning resources</h2>,
+        element: <LearningResources/>
       },
     ],
   },
