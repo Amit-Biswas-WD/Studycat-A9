@@ -1,17 +1,20 @@
 import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
+import { AuthContext } from "../../context/AuthProvider";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { user } = useContext(AuthContext);
 
   const items = [
     <NavLink to={`/`}>Home</NavLink>,
     <NavLink to={`/language-kids`}>Languages for kids</NavLink>,
     <NavLink to={`/about-us`}>About us</NavLink>,
     <NavLink to={`/learning-resources`}>Learning resources</NavLink>,
+    <div>{user ? <p>{user.email}</p> : ""}</div>,
   ];
 
   return (
@@ -23,10 +26,7 @@ const Navbar = () => {
         </Link>
         <ul className="flex items-center gap-8 text-xl">
           {items.map((item, index) => (
-            <li
-              className=""
-              key={index}
-            >
+            <li className="" key={index}>
               {item}
             </li>
           ))}

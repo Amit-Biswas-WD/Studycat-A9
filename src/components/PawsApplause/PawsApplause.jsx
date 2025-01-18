@@ -44,8 +44,9 @@ const PawsApplause = () => {
         </p>
       </div>
       <div className="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-8">
-        {totalImage.map((image) => (
+        {totalImage.map((image, index) => (
           <img
+            key={index}
             className="max-w-[120px] h-auto bg-cover object-cover mx-auto"
             src={image.image}
             alt=""
