@@ -1,12 +1,14 @@
 import { useContext, useState } from "react";
 import { FaEyeSlash, FaGithub } from "react-icons/fa";
 import { IoIosEye } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [showPass, setShowPass] = useState(false);
+  const navigate = useNavigate();
   const { createEmailPassword, createGoogleAccount, createGithubAccount } =
     useContext(AuthContext);
 
@@ -20,6 +22,8 @@ const Login = () => {
     createEmailPassword(email, password)
       .then((result) => {
         console.log(result.user);
+        toast("Login Successfully.");
+        navigate("/");
       })
       .catch((err) => {
         console.log("Error", err);

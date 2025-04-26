@@ -535,16 +535,18 @@ const FluencyStartsHere = () => {
           <img className="w-[110px] h-auto" src={question} alt="" />
           {data.map((item) => (
             <Link to={item.path} key={item.id}>
-              <div className="flex flex-col items-center px-6 py-10 justify-center text-center space-y-2 text-[#499DEC] border border-[#499DEC] bg-[#DEF0FA] rounded-xl max-w-[170px] max-h-[110px]">
-                <img
-                  className="w-14 h-14 pb-2"
-                  src={item.icon}
-                  alt={item.name || "Icon"}
-                />
-                {item.name && (
-                  <p className="font-medium text-lg">{item.name}</p>
-                )}
-              </div>
+              <Link to={`/login`}>
+                <div className="flex flex-col items-center px-6 py-10 justify-center text-center space-y-2 text-[#499DEC] border border-[#499DEC] bg-[#DEF0FA] rounded-xl max-w-[170px] max-h-[110px]">
+                  <img
+                    className="w-14 h-14 pb-2"
+                    src={item.icon}
+                    alt={item.name || "Icon"}
+                  />
+                  {item.name && (
+                    <p className="font-medium text-lg">{item.name}</p>
+                  )}
+                </div>
+              </Link>
             </Link>
           ))}
         </div>

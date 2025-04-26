@@ -3,10 +3,12 @@ import { FaEyeSlash, FaGithub } from "react-icons/fa";
 import { IoIosEye } from "react-icons/io";
 import { AuthContext } from "../../context/AuthProvider";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const SignUp = () => {
   const [showPass, setShowPass] = useState(false);
+  const navigate = useNavigate()
   const { createUser, createGoogleAccount, createGithubAccount } =
     useContext(AuthContext);
 
@@ -22,6 +24,8 @@ const SignUp = () => {
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
+        toast("Dear user your signUp successfully.")
+        navigate("/")
       })
       .catch((err) => {
         console.log("Error", err);

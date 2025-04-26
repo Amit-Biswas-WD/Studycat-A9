@@ -7,14 +7,14 @@ import { AuthContext } from "../../context/AuthProvider";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
 
   const items = [
     <NavLink to={`/`}>Home</NavLink>,
     <NavLink to={`/language-kids`}>Languages for kids</NavLink>,
     <NavLink to={`/about-us`}>About us</NavLink>,
     <NavLink to={`/learning-resources`}>Learning resources</NavLink>,
-    <div>{user ? <p>{user.email}</p> : ""}</div>,
+    // <div>{user ? <p>{user.email}</p> : ""}</div>,
   ];
 
   return (
@@ -31,6 +31,37 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+        <div className="login flex gap-2 items-center">
+          <div className=" ">
+            {user && user?.email ? (
+              <div className="relative group">
+                <img
+                  className="w-16 h-16 rounded-full"
+                  src={user.photoURL}
+                  alt={user?.displayName || "User"}
+                />
+                <p className="absolute left-0 right-0 bottom-[-40px] text-center text-sm bg-gray-800 text-white py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {user?.displayName}
+                </p>
+              </div>
+            ) : (
+              <img
+                className="w-8 h-auto"
+                src="https://i.ibb.co.com/ZB6Y8KM/Profile-Male-PNG.png"
+                alt=""
+              />
+            )}
+          </div>
+          {user && user?.email ? (
+            <button onClick={logOut} className="btn btn-neutral rounded-none">
+              LogOut
+            </button>
+          ) : (
+            <Link to={`/login`} className="btn btn-neutral rounded-none">
+              Login
+            </Link>
+          )}
+        </div>
       </div>
       {/* Mobile Navbar */}
       <div className="lg:hidden flex p-4 relative text-[#499DEC]">

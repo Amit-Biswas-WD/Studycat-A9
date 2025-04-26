@@ -8,6 +8,7 @@ import SignUp from "./../page/Login - Register/SignUp";
 import Login from "./../page/Login - Register/Login";
 import LearnEnglish from "../components/LearnEnglish/LearnEnglish";
 import LearnSpanish from "../components/LearnSpanish/LearnSpanish";
+import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -40,12 +41,16 @@ export const router = createBrowserRouter([
       },
       {
         path: "/learn-english",
-        element: <LearnEnglish />,
+        element: (
+          <PrivateRoute>
+            <LearnEnglish />
+          </PrivateRoute>
+        ),
         loader: () => fetch(`https://jsonplaceholder.typicode.com/users`),
       },
       {
         path: "/learn-spanish",
-        element: <LearnSpanish/>,
+        element: <LearnSpanish />,
         loader: () => fetch(`https://jsonplaceholder.typicode.com/users`),
       },
       {
